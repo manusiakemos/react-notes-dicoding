@@ -63,7 +63,7 @@ class App extends React.Component {
 
         <NoteForm addNote={this.onAddHandler} />
 
-        <div className="container">
+        { <div className="container">
           <SearchForm searchNotes={this.onSearchHandler} />
 
           <ListNotes
@@ -97,7 +97,7 @@ class App extends React.Component {
             onArchive={this.onArchiveHandler}
             archived={true}
           />
-        </div>
+        </div> }
       </div>
     );
   }

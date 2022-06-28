@@ -24,7 +24,7 @@ class SearchForm extends React.Component {
 
   render() {
     return (
-      <form id="searchForm" className="searchForm" onSubmit={this.onSubmitEventHandler}>
+      <form id="searchForm" onSubmit={this.onSubmitEventHandler}>
         <input
           type="text"
           className="search-form-control"

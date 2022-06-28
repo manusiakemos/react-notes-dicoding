@@ -4,8 +4,9 @@ import NoteItem from "./NoteItem";
 function ListNotes({ title, notes, onDelete, onArchive }) {
   return (
     <div id="listNotes">
-      <h2 className="title">{title}</h2>
+      <h2 className="title text-center">{title}</h2>
 
+      <div className="listNotesWrapper">
       {notes.length
         ? ListNotesItem(
             notes,
@@ -13,6 +14,7 @@ function ListNotes({ title, notes, onDelete, onArchive }) {
             onArchive
           )
         : "not found"}
+      </div>
     </div>
   );
 

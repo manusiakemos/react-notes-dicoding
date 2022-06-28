@@ -31,15 +31,14 @@ code {
 
 
 
-#header{
+.header-wrapper{
   display: flex;
-  align-items: center;
   flex: 1;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   border-bottom: 3px dashed var(--gray-lighter);
-  padding-left: 32px;
-  padding-right: 32px;
-  gap: 4px;
+  gap: 16px;
 }
 
 #appName{
@@ -138,15 +137,25 @@ code {
   cursor: pointer;
 }
 
+.listNotesWrapper{
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .noteItem {
   background: var(--gray);
   border-radius: 8px;
   padding: 8px 16px;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 1em;
   border: 3px solid var(--gray-lighter);
+  max-width: 300px;
 }
 
 .noteItemTitle {
@@ -156,6 +165,13 @@ code {
   font-weight: 700;
   font-size: 1.2em;
   letter-spacing: 0.5px;
+}
+
+.noteItemDate{
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: var(--secondary);
 }
 
 .noteItemBody {
@@ -173,11 +189,25 @@ code {
 
 #searchForm{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.search-form-control{
+  display: block;
+  max-width: 300px;
+}
+
+#noteForm{
+  display: flex;
   flex: 1 1 auto;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   gap: 4px;
 }
+
 .error{
   color: var(--danger);
   font-size: 0.8em;
@@ -198,6 +228,6 @@ code {
   height: 32px;
 }
 
-.searchForm{
-  max-width: 600px;
+.text-center{
+  text-align: center;
 }
