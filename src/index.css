@@ -1,13 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&family=Plus+Jakarta+Sans:wght@400;700&family=Carter+One&display=swap');
+
+:root{
+  --font-display: "Carter One", sans-serif;
+  --font-primary: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  --font-secondary: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  --white : #ffffff;
+  --primary: #f9b31e;
+  --secondary: #f9c659;
+  --gray: #27292f;
+  --gray-darker: #0c0c0c;
+  --gray-lighter: #cbcbcb;
+  --danger: #f14949;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--gray-darker);
+  color: var(--gray-lighter);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+#header{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  border-bottom: 3px dashed var(--gray-lighter);
+  padding-left: 32px;
+  padding-right: 32px;
+  gap: 4px;
+}
+
+#appName{
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 1.5em;
+  flex-grow: 1;
+  font-family: var(--font-display);
+  
+}
+
+.container{
+  padding: 1em 2em;
+}
+
+.title{
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  color: var(--secondary);
+  font-size: 1.5em;
+}
+
+.form-control{
+  max-width: 600px;
+  display: block;
+  width: 100%;
+  background: var(--gray);
+  line-height: 1.5em;
+  border-radius: 8px;
+  border: 3px solid var(--white);
+  font-family: var(--font-primary);
+  margin: 8px 0px;
+  color: var(--white);
+  padding: 12px 6px;
+}
+
+.form-control:focus{
+  background: var(--gray);
+  outline: var(--primary);
+  color: var(--primary);
+}
+
+.btn{
+  line-height: 1.5em;
+  border-radius: 8px;
+  border: 3px solid var(--white);
+  font-family: var(--font-primary);
+  font-weight: 600;
+  margin: 8px 0px;
+  color: var(--gray);
+  background: var(--primary);
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background: var(--secondary);
+}
+
+.search-form-control{
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-grow: 1;
+  background: var(--gray);
+  line-height: 2.5em;
+  border-radius: 8px;
+  border: 3px solid var(--white);
+  font-family: var(--font-primary);
+  margin: 8px 0px;
+  color: var(--white);
+  padding:4px 8px;
+}
+
+.search-form-control:focus{
+  background: var(--gray);
+  outline: var(--primary);
+  color: var(--primary);
+}
+
+.buttonDelete{
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.buttonArchive{
+  background: none;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.noteItem {
+  background: var(--gray);
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1em;
+  border: 3px solid var(--gray-lighter);
+}
+
+.noteItemTitle {
+  font-family: var(--font-secondary);
+  margin: 0px;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+}
+
+.noteItemBody {
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.action{
+  display: flex;
+  flex: 1;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+#searchForm{
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.error{
+  color: var(--danger);
+  font-size: 0.8em;
+  padding-bottom: 8px;
+  display: block;
+  flex: none;
+}
+
+.info{
+  color: var(--gray-lighter);
+  font-size: 0.8em;
+  padding-bottom: 8px;
+  display: block;
+  flex: none;
+}
+
+.appicon{
+  height: 32px;
+}
+
+.searchForm{
+  max-width: 600px;
 }
